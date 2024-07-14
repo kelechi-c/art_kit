@@ -1,0 +1,60 @@
+[project]
+name = "ripple_net"
+version = "0.1.5"
+description = "Text-image search and image tagging library"
+authors = [
+    { name = "Chibuzo Kelechi", email = "kelechichibuzo7@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+license = { file = "LICENSE" }
+keywords = [
+	'machine learning',
+	'image search',
+	'multimodal AI',
+	'image datasets',
+	'vector embeddings'
+]
+
+classifiers=[
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: Apache Software License'
+]
+
+dependencies = [
+   'sentence-transformers', 'datasets', 
+   'faiss-cpu', 'faiss-gpu', 'matplotlib',
+   'transformers', 'numpy'
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/ripple_net/"
+Repository = "https://github.com/kelechi-c/ripple_net"
+
+[project.optional-dependencies]
+examples = []
+test = [
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["ripple"]

@@ -1,0 +1,9 @@
+sentence-transformers
+datasets
+matplotlib
+faiss-cpu
+faiss-gpu
+streamlit
+transformers
+tqdm
+ripple_net
