@@ -1,19 +1,15 @@
 [project]
-name = "ripple_net"
-version = "0.1.5"
-description = "Text-image search and image tagging library"
+name = "art-kit"
+version = "0.1.0"
+description = "image manipulation library for style transfer, sketchifying, "
 authors = [
     { name = "Chibuzo Kelechi", email = "kelechichibuzo7@gmail.com" }
 ]
 readme = "README.md"
-requires-python = ">= 3.9"
+requires-python = ">= 3.5"
 license = { file = "LICENSE" }
 keywords = [
-	'machine learning',
-	'image search',
-	'multimodal AI',
-	'image datasets',
-	'vector embeddings'
+
 ]
 
 classifiers=[
@@ -25,14 +21,12 @@ classifiers=[
 ]
 
 dependencies = [
-   'sentence-transformers', 'datasets', 
-   'faiss-cpu', 'faiss-gpu', 'matplotlib',
-   'transformers', 'numpy'
+    'opencv-python', 'torch', 'iorchvision','matplotlib', 'numpy'
 ]
 
 [project.urls]
 Homepage = "https://pypi.org/project/ripple_net/"
-Repository = "https://github.com/kelechi-c/ripple_net"
+Repository = "https://github.com/kelechi-c/art_kit"
 
 [project.optional-dependencies]
 examples = []
@@ -57,4 +51,4 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["ripple"]
+packages = ["art_kit"]
